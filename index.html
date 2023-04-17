@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BullSight</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="button.css"/>
+    <link rel="icon" href="img/vector.png" />
+    <link rel="apple-touch-icon" href="img/vector-192.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta
+    name="description"
+    content="BullSight is a powerful application for analyzing stocks, exchanges, and forex using advanced charting tools. With its user-friendly interface and customizable features, it's perfect for seasoned traders and novice investors alike. "
+  />
+    <script defer src="app.js"></script>
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+
+</head>
+<body>
+
+
+    <header class="header">
+        <a class="txt" href="#">
+            <img class="logo" alt="BullSight" src="img/logo4.png"></a>
+        <div class="main-nav">
+          <ul class="nav-list">
+            <li><a class="click-btn btn-style701" href="#chart"><span>Chart</span></a></li>
+            <li><a class="click-btn btn-style701" href="#marketdata"><span>Market</span></a></li>
+            <li><a class="click-btn btn-style701" href="#events"><span>Events</span></a></li>
+            <li><a class="click-btn btn-style701" href="#heatmap"><span>Forex</span></a></li>
+            <li><a class="click-btn btn-style701" href="#screener"><span>Screener</span></a></li>                              
+            <li><a class="click-btn btn-style701" href="#crypto"><span>Crypto</span></a></li>                              
+          </ul>
+        </div>    
+    </header>
+    
+
+<main>
+
+
+  <!-- TICKER TAPE -->
+
+
+<div class="ticker-tape" id="ticker-tape">
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        new TradingView.widget(
+    {
+    "symbols": [
+      {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500"
+      },
+      {
+        "proName": "FOREXCOM:NSXUSD",
+        "title": "US 100"
+      },
+      {
+        "proName": "FX_IDC:EURUSD",
+        "title": "EUR/USD"
+      },
+      {
+        "proName": "BITSTAMP:BTCUSD",
+        "title": "Bitcoin"
+      },
+      {
+        "proName": "BITSTAMP:ETHUSD",
+        "title": "Ethereum"
+      },
+      {
+        "description": "USD/INR",
+        "proName": "FX_IDC:USDINR"
+      },
+      {
+        "description": "HONG KONG 50 ",
+        "proName": "FOREXCOM:HKXHKD"
+      }
+    ],
+    "showSymbolLogo": true,
+    "colorTheme": "light",
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "locale": "in"
+  });
+    </script>
+  </div>
+
+    </div>
+
+
+
+
+    
+
+<!-- CHART -->
+
+<div class="para"><div class="line-1 anim-typewriter">Visualize your data with ease!</div></div>
+
+<div class="chart" id="chart">
+<div class="tradingview-widget-container">
+    <div id="tradingview_dfb88"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget(
+    {
+    "width": 1100,
+    "height": 610,
+    "symbol": "SKILLING:NASDAQ",
+    "interval": "1",
+    "timezone": "Asia/Kolkata",
+    "theme": "light",
+    "style": "1",
+    "locale": "in",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "withdateranges": true,
+    "hide_side_toolbar": false,
+    "allow_symbol_change": true,
+    "details":true,
+    "hotlist":true,
+    "container_id": "tradingview_dfb88",
+
+  }
+    );
+    </script>
+  </div>
+</div>
+
+
+<!-- MARKETDATA -->
+<h3 class="animate-charcter" id="marketdata">Market Data</h3>
+
+<div class="wrap col">
+<div class="marketdata" >
+<div class="tradingview-widget-container2" >
+    <div class="tradingview-widget-container__widget" ></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+    
+    new TradingView.widget({
+    "width": "770",
+    "height": "550",
+    "symbolsGroups": [
+      {
+        "name": "Indices",
+        "originalName": "Indices",
+        "symbols": [
+          {
+            "name": "FOREXCOM:SPXUSD",
+            "displayName": "S&P 500"
+          },
+          {
+            "name": "FOREXCOM:NSXUSD",
+            "displayName": "US 100"
+          },
+          {
+            "name": "FOREXCOM:DJI",
+            "displayName": "Dow 30"
+          },
+          {
+            "name": "INDEX:NKY",
+            "displayName": "Nikkei 225"
+          },
+          {
+            "name": "INDEX:DEU40",
+            "displayName": "DAX Index"
+          },
+          {
+            "name": "FOREXCOM:UKXGBP",
+            "displayName": "UK 100"
+          },
+          {
+            "name": "INDEX:SENSEX",
+            "displayName": "SENSEX"
+          }
+        ]
+      },
+      {
+        "name": "Futures",
+        "originalName": "Futures",
+        "symbols": [
+          {
+            "name": "CME_MINI:ES1!",
+            "displayName": "S&P 500"
+          },
+          {
+            "name": "CME:6E1!",
+            "displayName": "Euro"
+          },
+          {
+            "name": "COMEX:GC1!",
+            "displayName": "Gold"
+          },
+          {
+            "name": "NYMEX:CL1!",
+            "displayName": "Crude Oil"
+          },
+          {
+            "name": "NYMEX:NG1!",
+            "displayName": "Natural Gas"
+          },
+          {
+            "name": "CBOT:ZC1!",
+            "displayName": "Corn"
+          }
+        ]
+      },
+      {
+        "name": "Bonds",
+        "originalName": "Bonds",
+        "symbols": [
+          {
+            "name": "CME:GE1!",
+            "displayName": "Eurodollar"
+          },
+          {
+            "name": "CBOT:ZB1!",
+            "displayName": "T-Bond"
+          },
+          {
+            "name": "CBOT:UB1!",
+            "displayName": "Ultra T-Bond"
+          },
+          {
+            "name": "EUREX:FGBL1!",
+            "displayName": "Euro Bund"
+          },
+          {
+            "name": "EUREX:FBTP1!",
+            "displayName": "Euro BTP"
+          },
+          {
+            "name": "EUREX:FGBM1!",
+            "displayName": "Euro BOBL"
+          }
+        ]
+      },
+      {
+        "name": "Forex",
+        "originalName": "Forex",
+        "symbols": [
+          {
+            "name": "FX:EURUSD",
+            "displayName": "EUR/USD"
+          },
+          {
+            "name": "FX:GBPUSD",
+            "displayName": "GBP/USD"
+          },
+          {
+            "name": "FX:USDJPY",
+            "displayName": "USD/JPY"
+          },
+          {
+            "name": "FX:USDCHF",
+            "displayName": "USD/CHF"
+          },
+          {
+            "name": "FX:AUDUSD",
+            "displayName": "AUD/USD"
+          },
+          {
+            "name": "FX:USDCAD",
+            "displayName": "USD/CAD"
+          },
+          {
+            "name": "FX_IDC:INRUSD",
+            "displayName": "INR/USD"
+          }
+        ]
+      }
+    ],
+    "showSymbolLogo": true,
+    "colorTheme": "light",
+    "isTransparent": false,
+    "locale": "in"
+  });
+    </script>
+  </div>
+</div>
+
+
+<!-- GAINERS/LOSERS -->
+
+
+<div class="gainers-losers">
+<div class="tradingview-widget-container1">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+    {
+    "colorTheme": "light",
+    "dateRange": "12M",
+    "exchange": "BSE",
+    "showChart": true,
+    "locale": "in",
+    "largeChartUrl": "",
+    "isTransparent": false,
+    "showSymbolLogo": true,
+    "showFloatingTooltip": false,
+    "width": "400",
+    "height": "600",
+    "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+    "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+    "gridLineColor": "rgba(240, 243, 250, 0)",
+    "scaleFontColor": "rgba(106, 109, 120, 1)",
+    "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+    "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+    "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+    "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+    "symbolActiveColor": "rgba(41, 98, 255, 0.12)"
+  }
+    </script>
+  </div>
+</div>
+
+</div>
+<!-- EVENT CALENDAR -->
+
+<h3 class="animate-charcter" id="events">Events</h3>
+<div class="calendar" >
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+    new TradingView.widget(
+    {
+    "colorTheme": "light",
+    "isTransparent": false,
+    "width": "910",
+    "height": "600",
+    "locale": "in",
+    "importanceFilter": "-1,0,1",
+    "currencyFilter": "CAD"
+  });
+    </script>
+  </div>
+</div>
+
+
+
+<!-- HEATMAP -->
+
+<h3 class="animate-charcter" id="heatmap">Heatmap</h3>
+<div class="col">
+<div class="heatmap" >
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
+    {
+    "width": 1100,
+    "height": 500,
+    "currencies": [
+    "INR",
+      "EUR",
+      "USD",
+      "JPY",
+      "GBP",
+      "AUD",
+      "CAD",
+      "NZD",
+      "CNY"
+    ],
+    "isTransparent": false,
+    "colorTheme": "light",
+    "locale": "in"
+  }
+    </script>
+  </div>
+ </div>
+</div>
+
+
+ <!-- STOCKS SCREENER -->
+
+ <h3 class="animate-charcter" id="screener">Stocks Screener</h3>
+<div class="screener" >
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+    {
+    "width": 1000,
+    "height": 490,
+    
+    "defaultColumn": "overview",
+    "defaultScreen": "most_capitalized",
+    "market": "us",
+    "showToolbar": true,
+    "colorTheme": "light",
+    "locale": "in"
+  }
+    </script>
+  </div>
+ </div>
+
+
+ <!-- CRYPTO MARKET -->
+
+ <h3 class="animate-charcter" id="crypto">Cryptocurrency</h3>
+<div class="col">
+ <div class="crypto" >
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+    {
+    "width": 1000,
+    "height": 490,
+    "defaultColumn": "overview",
+    "screener_type": "crypto_mkt",
+    "displayCurrency": "USD",
+    "colorTheme": "light",
+    "locale": "in"
+  }
+    </script>
+  </div>
+ </div>
+</div>
+
+</main>
+
+
+<!-- FOOTER -->
+
+
+<footer class="footer">
+  <div class="container grid grid--footer">
+    <div class="logo-col">
+      <a class="footer-logo" href="#">
+        <img class="logo-f" alt="BullSight" src="img/logo4.png" />
+      </a>
+     
+      <p class="copyright">
+        Copyright &copy;<span id="year"></span> by BullSight, Inc. All rights
+        are reserved.
+      </p>
+    </div>
+    <div class="address-col">
+      <p class="footer-heading">Contact us</p>
+      <address class="contacts">
+        <p>12/94, Somanur, Coimbatore, TN 641-668</p>
+        <p>
+          <a class="footer-link" href="tel:6383683533">+91 6383683533</a
+          ><br /><a
+            class="footer-link"
+            href="mailto:r.pravinkanth653@gmail.com"
+            >r.pravinkanth653@gmail.com</a
+          >
+        </p>
+      </address>
+    </div>
+    <div class="links">
+      <ul class="social-links">
+        <li>
+          <a class="footer-link" href="https://www.linkedin.com/in/pravin-kanth-a71755205/"
+            ><ion-icon class="social-icon" name="logo-linkedin"></ion-icon></a>
+        </li>
+        <li>
+          <a class="footer-link" href="https://www.instagram.com/p._.kanth/"
+            ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a class="footer-link" href="#"
+            ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a class="footer-link" href="https://twitter.com/Pravin_Kanth03"
+            ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+          ></a>
+        </li>
+      </ul>
+    </div>
+   
+  </div>
+</footer>
+</body>
+</html>

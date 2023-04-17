@@ -1,0 +1,289 @@
+/* Google Fonts */
+/* @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro); */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Secular+One&family=Sedgwick+Ave+Display&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+html {
+     font-size: 62.5%; 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  } 
+
+body {
+    /* font-family: "Rubik", sans-serif; */
+    font-family: 'Anonymous Pro', monospace;  
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    overflow-x: hidden;
+    /* background-color: rgb(40, 39, 39); */
+
+  }  
+
+.header{
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6.6rem;
+    padding: 0 4.8rem;
+    margin: 0 auto;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  }
+
+.logo{
+  width:22rem ;
+    height: 6rem ;
+}  
+
+.nav-list{
+  gap:1rem;
+
+  list-style-type:none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticker-tape{
+  width:170rem;
+  margin: 7.8rem auto 2rem auto;
+
+}
+
+.para{
+  color: rgba(0, 0, 0, 0.687);
+  text-align: center;
+  height: 6rem;
+  /* background-color: #555; */
+  max-width: 53rem;
+  margin:auto auto ;
+  margin-top:3rem;
+}
+
+
+
+.line-1{
+    position: relative;
+
+    height:3.2rem;
+    top: 50%;  
+    width: 24em;
+    margin-left: 3rem ;
+    /* margin: auto; */
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 250%;
+    font-family: 'Secular One', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 3s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;   
+  animation-delay: 3s;      
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 18.4em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: black;}
+}
+
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: block;
+      font-size: 5rem;
+      text-align: center;
+      margin:1rem 0;
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+
+.chart{
+  padding-top: 3rem;
+  margin:0 auto;
+  margin-bottom: 8rem ;
+}
+
+
+.wrap{
+  max-width: 130rem;
+  display: grid;
+  margin: 8rem auto;
+  grid-template-columns: 1fr 0.5fr;
+  justify-content: center;
+  /* gap: 4rem; */
+  /* align-items: center; */
+}
+
+
+.marketdata{
+  padding-left: 3rem;
+  margin-bottom: 3rem ;
+}
+
+.calendar{
+  max-width: fit-content;
+  margin:8rem auto ;
+}
+
+.heatmap{
+  max-width:fit-content;
+  margin: 8rem auto;
+
+}
+
+
+.screener{
+  max-width:fit-content;
+  margin: 8rem auto;
+
+}
+
+.crypto{
+  max-width:fit-content;
+  margin: 8rem auto 8rem auto;
+
+}
+
+.col{
+  max-width: 130rem ;
+}
+
+/* FOOTER */
+
+.container {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  row-gap: 1.6rem;
+  column-gap: 7.4rem;
+}
+
+.footer {
+  background-color: #f8f8f8;
+  padding: 4.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1fr 1fr 0.3fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight:900;
+  margin-bottom: 2rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.contacts p:first-child {
+  margin-bottom: 2.4rem;
+  color: #767676;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #555;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+}
+
+.logo-f{
+  width:22rem ;
+  height: 6rem ;
+}
